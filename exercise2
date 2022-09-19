@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace CSharpExercises.Exercises.LINQ
+{
+    class LastWordContainingLetterTask
+    {
+        public static void Main()
+        {
+            var words = new List<string> { "plane", "ferry", "car", "bike" };
+
+            var word = words.OrderBy(x => x)
+                            .LastOrDefault(w => w.Contains("e"));
+
+            Console.WriteLine($"{word}"); 
+        }
+    }
+}
